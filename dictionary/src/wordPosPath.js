@@ -7,7 +7,7 @@ export default function WordPos() {
     const { word, partOfSpeech } = useParams()
     useEffect(()=>{
         const getWords = async () =>{
-            const resWords = await axios.get(`http://localhost:8080/${word}/${partOfSpeech}`)
+            const resWords = await axios.get(`http://localhost:8080/${word.toUpperCase()}/${partOfSpeech}`)
             setWords(resWords.data);
         }
         getWords();

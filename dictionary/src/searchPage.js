@@ -22,7 +22,7 @@ export default function SearchPage() {
             <option value={'adv.'}>adv.</option>
             <option value={'v.'}>v.</option>
         </select>
-        <button>search by word only</button>
+        <button><Link to={`/${word}`}>search by word only</Link></button>
         <button><Link to={`/${word}/${pos}`}>search by word and part of speech</Link></button>
         <button><Link to={`/part-of-speech/${pos}`}>get random word by part of speech</Link></button>
     </div>
