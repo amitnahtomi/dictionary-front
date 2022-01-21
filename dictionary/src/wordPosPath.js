@@ -17,16 +17,19 @@ export default function WordPos() {
             
         }
         getWords();
-    })
+    },[])
 
     return <div>{words.map((word)=>{
         return <div>
             <h1>{word.word}</h1>
             <span>{word.pos}</span>
-            <div>{word.definitions[0].split(" ").map((w)=>{
-                return <Link to={`/${w}`}>{w} </Link>
+            <div>{word.definitions.map((def)=>{
+                return <div>{def.split(" ").map((w)=>{
+                    return <Link to={`/${w}`}>{w} </Link>
+                })}</div>
             })}</div>
-            <button><Link to={'/'}>home page</Link></button>
         </div>
-    })}</div>
+    })}
+    <button><Link to={'/'}>home page</Link></button>
+    </div>
 }

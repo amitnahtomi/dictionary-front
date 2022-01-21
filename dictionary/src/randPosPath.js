@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function RandPos() {
-    const [words, setWords] = useState({pos: '', word: '', definitions: ['']});
     const { part } = useParams()
+    const [words, setWords] = useState({pos: '', word: '', definitions: ['']});
 
     useEffect(()=>{
         const getWords = async () =>{
@@ -18,13 +18,15 @@ export default function RandPos() {
             
         }
         getWords();
-    }, [])
+    },[])
 
     return <div>
         <h1>{words.word}</h1>
         <span>{words.pos}</span>
-        <div>{words.definitions[0].split(" ").map((w)=>{
-                return <Link to={`/${w}`}>{w} </Link>
+        <div>{words.definitions.map((def)=>{
+                return <div>{def.split(" ").map((w)=>{
+                    return <Link to={`/${w}`}>{w} </Link>
+                })}</div>
             })}</div>
         <button><Link to={'/'}>home page</Link></button>
     </div>
