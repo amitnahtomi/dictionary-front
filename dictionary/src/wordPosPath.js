@@ -24,9 +24,9 @@ export default function WordPos() {
             <h1>{word.word}</h1>
             <span>{word.pos}</span>
             <div>{word.definitions.map((def)=>{
-                return <div>{def.split(" ").map((w)=>{
+                return <div><div>{def.split(" ").map((w)=>{
                     return <Link to={`/${w}`}>{w} </Link>
-                })}</div>
+                })}</div><br /></div>
             })}</div>
         </div>
     })}
