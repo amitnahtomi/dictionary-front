@@ -29,8 +29,18 @@ export default function SearchPage() {
             <option value={'Pronoun'}>Pronoun</option>
         </select><br />
         <input onChange={changeBegin} placeholder="word begin with..."></input><br />
-        <button><Link to={`/${word}`}>search by word only</Link></button>
-        <button><Link to={`/${word}/${pos}`}>search by word and part of speech</Link></button>
-        <button><Link to={`/part-of-speech/${pos}?letter=${begin}`}>random word by part of speech and beginning</Link></button>
+        <button><Link style={linkStyle} to={`/${word}`}>search by word only</Link></button>
+        <button><Link style={linkStyle} to={`/${word}/${pos}`}>search by word and part of speech</Link></button>
+        <button><Link style={linkStyle} to={`/part-of-speech/${pos}?letter=${begin}`}>random word by part of speech and beginning</Link></button>
     </div>
+}
+
+export const linkStyle = {
+    textDecoration: "none",
+    color: "steelBlue"
+}
+
+export const wordLinkStyle = {
+    textDecoration: "none",
+    color: "steelBlue"
 }

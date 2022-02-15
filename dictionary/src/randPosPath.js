@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link, useSearchParams } from "react-router-dom";
 import axios from "axios";
+import { linkStyle, wordLinkStyle } from "./searchPage";
 
 export default function RandPos() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -12,7 +13,7 @@ export default function RandPos() {
     useEffect(()=>{
         const getWords = async () =>{
             try {
-                const resWords = await axios.get(`http://localhost:8080/part-of-speech/${part}?letter=${begin.toUpperCase()}`)
+                const resWords = await axios.get(`https://qg53b5pwdb.execute-api.eu-central-1.amazonaws.com/dev/${part}?letter=${begin.toUpperCase()}`)
                 setWords(resWords.data);
             } catch {
                 setWords({word: "word not found", pos: "", definitions: [""]})
@@ -27,10 +28,11 @@ export default function RandPos() {
         <span>{words.pos}</span>
         <div>{words.definitions.map((def)=>{
                 return <div><div>{def.split(" ").map((w)=>{
-                    return <Link to={`/${w}`}>{w} </Link>
+                    return <Link style={wordLinkStyle} to={`/${w}`}>{w} </Link>
                 })}</div><br /></div>
             })}</div>
-        <button><Link to={'/'}>home page</Link></button>
+        <button><Link style={linkStyle} to={'/'}>home page</Link></button>
     </div>
 
 }
+

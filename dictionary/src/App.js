@@ -7,6 +7,7 @@ import RandPos from "./randPosPath";
 import SearchPage from "./searchPage";
 import WordPos from "./wordPosPath";
 import Word from "./wordPath";
+import "./App.css"
 
 function App() {
   return (

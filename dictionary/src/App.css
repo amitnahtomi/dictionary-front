@@ -1,0 +1,38 @@
+h1 {
+    color: blueviolet;
+}
+
+span {
+    color: dodgerblue;
+}
+
+div {
+    color: steelblue;
+}
+
+input {
+    margin-bottom: 1%;
+    border-radius: 2px;
+    border: steelblue solid 2px;
+    color: blueviolet;
+}
+
+select {
+    margin-bottom: 1%;
+    border-radius: 2px;
+    border: steelblue solid 2px;
+    color: blueviolet;
+}
+
+button {
+    color: blueviolet;
+    background-color: lightsalmon;
+    margin-right: 3px;
+    border-radius: 4px;
+    box-shadow: inset;
+}
+
+link {
+    color: blueviolet;
+    text-decoration: none;
+}
