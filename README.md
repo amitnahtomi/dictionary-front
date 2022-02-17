@@ -11,7 +11,7 @@ The app has four routes:
 2. Search by word on `/:word` - displays all the definitions for the given word.
 example for `/dream`:
 
-![word](images\word.PNG)
+### [word](images\word.PNG)
 
 3. Search by word and part of speech on `/:word/:partOfSpeech` - displays all the definitions for the given word from the given part of speech.
 example for `/dream/Noun`:
