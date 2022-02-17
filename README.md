@@ -16,7 +16,11 @@ example for `/dream`:
 3. Search by word and part of speech on `/:word/:partOfSpeech` - displays all the definitions for the given word from the given part of speech.
 example for `/dream/Noun`:
 
+![wordpos](wordpos.PNG)
+
 4. Get a random word by part of speech and optional word beginning on `/part-of-speech/:part?letter={}` - displays a random word definition from the given part of speech that begins with the given word beginning.
 example for `/part-of-speech/Noun?letter=ad`:
+
+![randpos](randpos.PNG)
 
 ***At all routes every word of every definition is clickable and by click will display the difinitions for that word***
