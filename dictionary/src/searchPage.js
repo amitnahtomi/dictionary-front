@@ -6,17 +6,9 @@ export default function SearchPage() {
     const [pos, setPos] = useState('Noun');
     const [begin, setBegin] = useState('');
 
-    const changePos = (e) => {
-        setPos(e.target.value);
-    }
-
-    const changeWord = (e) => {
-        setWord(e.target.value);
-    }
-
     return <div style={{textAlign: 'center'}}>
-        <input onChange={changeWord} placeholder="enter your word"></input><br />
-        <select onChange={changePos}>
+        <input onChange={(e)=>{setWord(e.target.value)}} placeholder="enter your word"></input><br />
+        <select onChange={(e)=>{setPos(e.target.value)}}>
             <option value={'Noun'}>Noun</option>
             <option value={'Adjective'}>Adjective</option>
             <option value={'Preposition'}>Preposition</option>
