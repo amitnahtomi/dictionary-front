@@ -14,10 +14,6 @@ export default function SearchPage() {
         setWord(e.target.value);
     }
 
-    const changeBegin = (e) => {
-        setBegin(e.target.value);
-    }
-
     return <div style={{textAlign: 'center'}}>
         <input onChange={changeWord} placeholder="enter your word"></input><br />
         <select onChange={changePos}>
@@ -28,7 +24,7 @@ export default function SearchPage() {
             <option value={'Verb'}>Verb</option>
             <option value={'Pronoun'}>Pronoun</option>
         </select><br />
-        <input onChange={changeBegin} placeholder="word begin with..."></input><br />
+        <input onChange={(e)=>{setBegin(e.target.value)}} placeholder="word begin with..."></input><br />
         <button><Link style={linkStyle} to={`/${word}`}>search by word only</Link></button>
         <button><Link style={linkStyle} to={`/${word}/${pos}`}>search by word and part of speech</Link></button>
         <button><Link style={linkStyle} to={`/part-of-speech/${pos}?letter=${begin}`}>random word by part of speech and beginning</Link></button>

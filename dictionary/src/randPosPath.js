@@ -13,7 +13,7 @@ export default function RandPos() {
     useEffect(()=>{
         const getWords = async () =>{
             try {
-                const resWords = await axios.get(`https://qg53b5pwdb.execute-api.eu-central-1.amazonaws.com/dev/${part}?letter=${begin.toUpperCase()}`)
+                const resWords = await axios.get(`https://qg53b5pwdb.execute-api.eu-central-1.amazonaws.com/dev/part-of-speech/${part}?letter=${begin.toUpperCase()}`)
                 setWords(resWords.data);
             } catch {
                 setWords({word: "word not found", pos: "", definitions: [""]})
