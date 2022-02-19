@@ -19,7 +19,8 @@ export default function Word() {
         getWords();
     })
 
-    return <div>{words.map((word)=>{
+    return <>
+    {words.map((word)=>{
         return <div>
             <h1>{word.word}</h1>
             <span>{word.pos}</span>
@@ -31,5 +32,5 @@ export default function Word() {
         </div>
     })}
     <button><Link style={linkStyle} to={'/'}>home page</Link></button>
-    </div>
+    </>
 }

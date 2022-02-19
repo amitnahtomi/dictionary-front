@@ -1,6 +1,6 @@
 # dictionary-front
 
-App url: `https://dictionaryreactbucket.s3.eu-central-1.amazonaws.com/index.html` (press the home page button)
+App url: ### [http://dictionaryreactbucket.s3-website.eu-central-1.amazonaws.com](http://dictionaryreactbucket.s3-website.eu-central-1.amazonaws.com)
 
 ***An english-english dictionary app with 3 searching options***
 
